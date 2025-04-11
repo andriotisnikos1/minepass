@@ -1,4 +1,4 @@
-{
+{"remoteCache":{"teamSlug":"minepass","apiUrl":"https://tbc.andriotis.me"},
   "$schema": "https://turbo.build/schema.json",
   "ui": "tui",
   "tasks": {
