@@ -35,7 +35,7 @@ export default function ProjectSettings() {
                 </div>
                 <div className="flex flex-col space-y-2 text-gray-700">
                     <span className="font-semibold !text-gray-300">Authorized Callback URLs</span>
-                    <textarea name="" className="border-2 border-gray-800 bg-gray-900 p-2" id=""></textarea>
+                    <textarea name="" className="border-2 border-gray-800 bg-gray-900 p-2 outline-none !text-gray-300" id=""></textarea>
                 </div>
             </div>
             <button className="flex items-center space-x-2 px-2 py-1.5 w-[max-content] bg-gray-900 rounded-md hover:bg-gray-800 hover:text-gray-300">

@@ -11,7 +11,7 @@ export default function Users() {
                 <thead className="border-b border-b-gray-800">
                     <tr>
                         <th className="text-start text-gray-500 px-4 py-1.5 text-sm font-[500]">Name</th>
-                        <th className="text-start text-gray-500 px-4 py-1.5 text-sm font-[500]">Last Login</th>
+                        <th className="text-start text-gray-500 px-4 py-1.5 text-sm font-[500]">UUID</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -24,8 +24,7 @@ export default function Users() {
                         </td>
                         <td>
                             <div className="flex items-center space-x-2 px-4 py-2">
-                                <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                                <p className="text-sm">5 minutes ago</p>
+                                <p className="text-sm">rcftgyou-erytuvyibuni-ydrxctfuygvu-tyfcugvhi</p>
                             </div>
                         </td>
                     </tr>
