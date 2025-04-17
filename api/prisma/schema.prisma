@@ -1,0 +1,43 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Project {
+  projectID             String   @id @default(uuid())
+  // oauth stuff
+  clientID       String   @unique
+  clientSecret   String   @unique
+  authorizedURLs String[]
+  // display stuff
+  name           String
+  // s3://[minepass-s3]/pictures/[projectID]
+  pictureID      String
+  ownerID        String
+}
+
+model ProjectUser {
+  rowID Int @id @default(autoincrement())
+  projectID String
+  mcID String
+  firstSeenAt DateTime @default(now())
+}
+
+model Session {
+  sessionID String @id @default(uuid())
+  email String @default("")
+  state String @default(cuid())
+  expiresAt DateTime
+  validated Boolean @default(false)
+}
